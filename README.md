@@ -13,13 +13,13 @@ Acompáñanos en este viaje analítico mientras desentrañamos patrones, identif
 
 # Data Cleansing
 
-1. Examinamos los dataframes de train y test
+1. Examinamos los dataframes de train y test.
 2. Buscamos una alta correlación entre las variables numéricas para evitar problemas de multicolinealidad y overfitting, pero no se aprecian en el heatmap. Sólo entre la "latitud" y la "longitud", pero ambas serán necesarias y complementarias.
-3. Covertimos a valores numéricos todas las columnas de valor para nuestro modelo predictivo con la ayuda de LabelEncoder y One Hot Encoding. Desechamos las que no aporten nada.
-4. Tratamos de clusterizar en agrupaciones de 10 valores distintos los datos de las columnas numéricas, sirviendo esto para reducir el ruido centrándonos en las características principales y simplificar el modelo.
+3. Covertimos a valores numéricos todas las columnas de valor para nuestro modelo predictivo con la ayuda de LabelEncoder y One Hot Encoding. Desechamos las que no aportan nada.
+4. Tratamos de clusterizar en agrupaciones de un máximo 10 valores distintos los datos de las columnas numéricas, sirviendo esto para reducir el ruido centrándonos en las características principales y simplificar el modelo.
 5. Descomponemos la columna "amenities" en otras nuevas en proporción a su numero y las integramos a los dataframes para facilitar su posterior interpretación.
 6. Aunque carecemos de un gran número de missing values, los rellenaremos con la moda de los valores de sus respectivas series.
-7. Para finalizar el proceso de limpieza de datos, daremos el mismo orden y número de columnas al train y al test, necesario para un correcto entrenamiento de los datos.
+7. Para finalizar el proceso de limpieza de datos, daremos el mismo orden y número de columnas al train y al test, necesario esto para un correcto entrenamiento de los datos.
 
 # Entrenamiento y predicción
 
@@ -29,7 +29,7 @@ Para el relizamiento de estas tareas hicimos uso de tres modelos de entrenamient
 2. Decision Tree Regressor
 3. Random Forest Regressor
 
-Éste último fue el que mejores resultados predictivos para los precios de los establecimientos ofrecidos por Airbnb. Puede que por los siguientes motivos:
+Éste último fue el que mejores resultados predictivos para los precios de los establecimientos ofrecidos por Airbnb nos ofreció. Puede que por los siguientes motivos:
 
 - Random Forest puede ser más adecuado para capturar patrones complejos o relaciones no lineales en los datos.
 - Mitiga mejor el problema de overfiting al promediar las predicciones de varios árboles, lo que puede resultar en un modelo más robusto y generalizable que Decision Tree.
